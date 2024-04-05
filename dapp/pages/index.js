@@ -193,7 +193,7 @@ export default function Home() {
         </div>
       )
     }else if(proposals.length==0){
-      console.log(proposals);
+      ;
       return(
         <div className={styles.description}>
           No proposals yet to Display
@@ -272,16 +272,16 @@ export default function Home() {
       fetchAllProposals()
     },5*1000)
 
-    // console.log(proposals.length);
+    
   },[])
 
 
-  // if(!isConnected){
-  //   return(
-  //     <div className={styles.nav}><ConnectButton/></div>
+  if(!isConnected){
+    return(
+      <div className={styles.nav}><ConnectButton/></div>
 
-  //   )
-  // }
+    )
+  }
 
   return (
     <>     
