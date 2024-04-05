@@ -269,7 +269,9 @@ export default function Home() {
   useEffect(()=>{
     setIsMounted(true);
     setInterval(()=>{
+      if(isConnected){
       fetchAllProposals()
+    }
     },5*1000)
 
     
